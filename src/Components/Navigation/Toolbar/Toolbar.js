@@ -2,11 +2,12 @@ import React from 'react';
 import './Toolbar.css'
 import Logo from '../../Logo/Logo'
 import NavigationItems from '../NavigationItems/NavigationItems'
+import Drawer from '../SideDrawer/Drawer/Drawer'
 
 const toolbar = (props) => {
     return (
         <header className='Toolbar'>
-            <div>MENU</div>
+            <Drawer clicked={props.drawerClicked} />
             <Logo />
             <nav className='DesktopOnly'>
                 <NavigationItems />
